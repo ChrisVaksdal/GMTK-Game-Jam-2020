@@ -48,9 +48,9 @@ MonoBehaviour:
   asteroidSpawnFrequency: 3
   spawnFrequencyAcc: 1.001
   maxAsteroidSpawnFrequency: 9
-  asteroidMinScale: 7
-  asteroidMaxScale: 15
+  asteroidMinScale: 1
+  asteroidMaxScale: 2
   asteroidAccuracy: 1
-  asteroidSpawnDistance: 10
+  asteroidSpawnDistance: 100
   asteroidMinThrust: 0.4
   asteroidMaxThrust: 3
