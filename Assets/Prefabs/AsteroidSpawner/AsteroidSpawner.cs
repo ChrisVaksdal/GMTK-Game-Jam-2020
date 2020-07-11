@@ -75,6 +75,9 @@ public class AsteroidSpawner : MonoBehaviour
 
             pos.x += Random.Range(-asteroidAccuracy, asteroidAccuracy) * asteroidMaxScale;
             pos.z += Random.Range(-asteroidAccuracy, asteroidAccuracy) * asteroidMaxScale;
+
+            /* Add despawner to asteroid so it disappears when it goes of screen */
+            newAsteroid.AddComponent<AsteroidDespawner>();
         }
     }
 }
