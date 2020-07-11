@@ -274,8 +274,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 1437720110}
-  m_Follow: {fileID: 1437720110}
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
@@ -304,7 +304,7 @@ Transform:
   m_Children:
   - {fileID: 1350477858}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1350477857
 GameObject:
@@ -484,13 +484,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!4 &1437720110 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1008458866174649257, guid: 0f3f459020d52a64da03a3e1580497e6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1008458865443814791}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1008458865443814791
+--- !u!1001 &1976502597
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -535,7 +529,7 @@ PrefabInstance:
     - target: {fileID: 1008458866174649257, guid: 0f3f459020d52a64da03a3e1580497e6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1008458866174649257, guid: 0f3f459020d52a64da03a3e1580497e6,
         type: 3}
