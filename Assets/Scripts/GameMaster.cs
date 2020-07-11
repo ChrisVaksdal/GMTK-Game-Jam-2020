@@ -89,4 +89,10 @@ public class GameMaster : MonoBehaviour
                 break;
         }
     }
+
+    public void RestartGame()
+    {
+        Application.LoadLevel(0);
+    }
+
 }
