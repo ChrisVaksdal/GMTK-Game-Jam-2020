@@ -24,6 +24,7 @@ public class Shooting : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && m_GameMaster.getPlayerHp() == 3)
         {
+            CinemachineShake.Instance.ShakeCamera(2f, 0.3f);
             GameObject instBullet = Instantiate(bullet, transform.position, transform.rotation);
             RocketMovement rocketMovement = instBullet.GetComponent<RocketMovement>();
             rocketMovement.baseVelocity = m_PlayerRigidbody.velocity;
