@@ -12,8 +12,13 @@ public class GameMaster : MonoBehaviour
     public Image hp1;
     public Image hp2;
     public Image hp3;
-    
+
+    public GameObject hud;
+    public GameObject gameOverScreen;
+    public GameObject scoreText;
+
     private int playerHp;
+    private long score;
     
     // Start is called before the first frame update
     void Start()
@@ -42,7 +47,9 @@ public class GameMaster : MonoBehaviour
         colorIcons();
         if (playerHp == 0)
         {
-            // TODO: Game Over
+            gameOverScreen.SetActive(true);
+            hud.SetActive(false);
+            scoreText.GetComponent<Text>().text = score.ToString();
         }
         return playerHp;
     }
@@ -89,4 +96,10 @@ public class GameMaster : MonoBehaviour
                 break;
         }
     }
+
+    public void RestartGame()
+    {
+        Application.LoadLevel(0);
+    }
+
 }
