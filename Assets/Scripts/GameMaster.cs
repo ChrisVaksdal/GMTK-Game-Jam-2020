@@ -63,6 +63,9 @@ public class GameMaster : MonoBehaviour
             gameOverScoreText.GetComponent<TextMeshProUGUI>().text = "SCORE: " + score.ToString();
             gameOverAudio.Play();
             gameMusicAudio.volume *= 0.3f;
+            player.GetComponent<ParticleSystem>().Play();
+            playerModel.SetActive(false);
+            player.GetComponent<Collider>().enabled = false;
             //gameMusicAudio.Stop();
             //gameMusicAudio.Play();
         }
