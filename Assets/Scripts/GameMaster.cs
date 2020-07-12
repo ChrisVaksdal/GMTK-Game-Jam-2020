@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -127,7 +128,9 @@ public class GameMaster : MonoBehaviour
 
     public void RestartGame()
     {
-        Application.LoadLevel(0);
+        Scene activeScene = SceneManager.GetActiveScene();
+        score = 0;
+        Application.LoadLevel(activeScene.name);
     }
 
 }
