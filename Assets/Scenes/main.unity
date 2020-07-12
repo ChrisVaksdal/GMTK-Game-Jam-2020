@@ -1546,6 +1546,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4973101782018520732, guid: 0f3f459020d52a64da03a3e1580497e6,
+        type: 3}
+      propertyPath: asteroidAccuracy
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973101782018520732, guid: 0f3f459020d52a64da03a3e1580497e6,
+        type: 3}
+      propertyPath: asteroidMinThrust
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973101782018520732, guid: 0f3f459020d52a64da03a3e1580497e6,
+        type: 3}
+      propertyPath: asteroidMaxThrust
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973101782018520732, guid: 0f3f459020d52a64da03a3e1580497e6,
+        type: 3}
+      propertyPath: spawnFrequencyAcc
+      value: 1.011
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973101782018520732, guid: 0f3f459020d52a64da03a3e1580497e6,
+        type: 3}
+      propertyPath: bombChance
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973101782018520732, guid: 0f3f459020d52a64da03a3e1580497e6,
+        type: 3}
+      propertyPath: shieldChance
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973101782018520732, guid: 0f3f459020d52a64da03a3e1580497e6,
+        type: 3}
+      propertyPath: maxAsteroidSpawnFrequency
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f3f459020d52a64da03a3e1580497e6, type: 3}
 --- !u!1 &2040664319
