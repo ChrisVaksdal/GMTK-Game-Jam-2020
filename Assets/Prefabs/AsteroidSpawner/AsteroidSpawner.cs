@@ -6,6 +6,7 @@ public class AsteroidSpawner : MonoBehaviour
 {
     public GameObject asteroidPrototype;
     public GameObject turkeyPrototype;
+    public GameObject shieldPowerUpPrototype;
 
     public float asteroidSpawnFrequency = 3f; // Asteroids spawned pr. 10 seconds.
     public float spawnFrequencyAcc = 1.001f; // How fast asteroid spawning will increase.
@@ -21,6 +22,7 @@ public class AsteroidSpawner : MonoBehaviour
     public float asteroidMaxThrust = 3f;
 
     public float turkeyChance = 0.1f;
+    public float shieldChance = 0.1f;
 
 
     private float timer = 0.0f;
@@ -69,7 +71,12 @@ public class AsteroidSpawner : MonoBehaviour
                 newAsteroid =
                     Object.Instantiate(turkeyPrototype, newAsteroidPos, Quaternion.identity, this.transform);
             }
-            else
+            else if (m_GameMaster.getPlayerHp() >= 3 && Random.Range(0f,1f) < shieldChance)
+            {
+                newAsteroid =
+                    Object.Instantiate(shieldPowerUpPrototype, newAsteroidPos, Quaternion.identity, this.transform);
+            }
+            else 
             {
                 newAsteroid =
                     Object.Instantiate(asteroidPrototype, newAsteroidPos, Quaternion.identity, this.transform);

@@ -7,6 +7,8 @@ using TMPro;
 
 public class GameMaster : MonoBehaviour
 {
+    public GameObject player;
+
     public Image iconAccelerate;
     public Image iconTurn;
     public Image iconShoot;
@@ -15,15 +17,21 @@ public class GameMaster : MonoBehaviour
     public GameObject hudScoreText;
     public GameObject gameOverScreen;
     public AudioSource healAudio;
+    public AudioSource shieldAudio;
     public GameObject gameOverScoreText;
     private int playerHp;
     public static long score;
-    
+
+    private GameObject playerModel;
+    private GameObject statueModel;
+
     // Start is called before the first frame update
     void Start()
     {
         playerHp = 3;
         colorIcons();
+        playerModel = player.transform.Find("SpaceShip").gameObject;
+        statueModel = player.transform.Find("statue_head").gameObject;
     }
 
     // Update is called once per frame
@@ -52,6 +60,11 @@ public class GameMaster : MonoBehaviour
             hud.SetActive(false);
             gameOverScoreText.GetComponent<TextMeshProUGUI>().text = score.ToString();
         }
+        else if (playerHp == 3)
+        {
+            playerModel.SetActive(true);
+            statueModel.SetActive(false);
+        }
         return playerHp;
     }
 
@@ -62,6 +75,15 @@ public class GameMaster : MonoBehaviour
         colorIcons();
         healAudio.Play();
         return playerHp;
+    }
+
+    public void ShieldPowerUp()
+    {
+        playerHp = 4;
+        colorIcons();
+        shieldAudio.Play();
+        playerModel.SetActive(false);
+        statueModel.SetActive(true);
     }
 
     private void colorIcons()
