@@ -1093,7 +1093,7 @@ PrefabInstance:
     - target: {fileID: 6438050549348255879, guid: 7b157b75585a8144790c7912b89ffc6f,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6438050550134225926, guid: 7b157b75585a8144790c7912b89ffc6f,
         type: 3}
@@ -1105,6 +1105,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Game Over
+      objectReference: {fileID: 0}
+    - target: {fileID: 6438050550134225944, guid: 7b157b75585a8144790c7912b89ffc6f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6438050550134225945, guid: 7b157b75585a8144790c7912b89ffc6f,
         type: 3}
