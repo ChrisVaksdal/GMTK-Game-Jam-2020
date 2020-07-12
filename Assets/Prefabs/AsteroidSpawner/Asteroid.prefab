@@ -4906,6 +4906,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b9fb353037c6744c979568dc4a01f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  risingText: {fileID: 7019898799823648667, guid: 0509978d67b42aa4ea7df1f41a3d5c5f,
+    type: 3}
 --- !u!82 &-3156979717770537076
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5002,5 +5004,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  risingText: {fileID: 7019898799823648667, guid: 0509978d67b42aa4ea7df1f41a3d5c5f,
-    type: 3}

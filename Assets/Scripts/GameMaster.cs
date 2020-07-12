@@ -50,7 +50,6 @@ public class GameMaster : MonoBehaviour
             gameOverScreen.SetActive(true);
             hud.SetActive(false);
             gameOverScoreText.GetComponent<TextMeshProUGUI>().text = score.ToString();
-            Debug.Log(score);
         }
         return playerHp;
     }
@@ -66,27 +65,30 @@ public class GameMaster : MonoBehaviour
 
     private void colorIcons()
     {
+        //Color yesColor = new Color32(0x00, 0xDB, 0x75, 0xFF); // Light-green
+        Color yesColor = new Color32(0x36, 0xE7, 0xE4, 0xFF);   // Cyan
+        Color noColor = Color.black;
         switch (playerHp)
         {
             case 3:                
-                iconShoot.color = Color.cyan;
-                iconTurn.color = Color.cyan;
-                iconAccelerate.color = Color.cyan;
+                iconShoot.color = yesColor;
+                iconTurn.color = yesColor;
+                iconAccelerate.color = yesColor;
                 break;
             case 2:                
-                iconShoot.color = Color.black;
-                iconTurn.color = Color.white;
-                iconAccelerate.color = Color.cyan;
+                iconShoot.color = noColor;
+                iconTurn.color = yesColor;
+                iconAccelerate.color = yesColor;
                 break;
             case 1:                
-                iconShoot.color = Color.black;
-                iconTurn.color = Color.black;
-                iconAccelerate.color = Color.cyan;
+                iconShoot.color = noColor;
+                iconTurn.color = noColor;
+                iconAccelerate.color = yesColor;
                 break;
             case 0:
-                iconShoot.color = Color.black;
-                iconTurn.color = Color.black;
-                iconAccelerate.color = Color.black;
+                iconShoot.color = noColor;
+                iconTurn.color = noColor;
+                iconAccelerate.color = noColor;
                 break;
         }
     }
