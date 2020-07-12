@@ -45,7 +45,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asteroidPrototype: {fileID: 4289599757261268736, guid: c602b7be482455844b9d1cf593b6da35,
     type: 3}
-  asteroidSpawnFrequency: 3
+  turkeyPrototype: {fileID: 6422810987887473059, guid: fd5496eeb6a9237419b767fae7decd15,
+    type: 3}
+  asteroidSpawnFrequency: 5
   spawnFrequencyAcc: 1.001
   maxAsteroidSpawnFrequency: 9
   asteroidMinScale: 1
@@ -54,3 +56,4 @@ MonoBehaviour:
   asteroidSpawnDistance: 100
   asteroidMinThrust: 0.4
   asteroidMaxThrust: 3
+  turkeyChance: 0.1

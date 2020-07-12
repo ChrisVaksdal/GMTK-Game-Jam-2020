@@ -5,6 +5,7 @@ using UnityEngine;
 public class AsteroidSpawner : MonoBehaviour
 {
     public GameObject asteroidPrototype;
+    public GameObject turkeyPrototype;
 
     public float asteroidSpawnFrequency = 3f; // Asteroids spawned pr. 10 seconds.
     public float spawnFrequencyAcc = 1.001f; // How fast asteroid spawning will increase.
@@ -19,9 +20,12 @@ public class AsteroidSpawner : MonoBehaviour
     public float asteroidMinThrust = 0.4f;
     public float asteroidMaxThrust = 3f;
 
+    public float turkeyChance = 0.1f;
+
 
     private float timer = 0.0f;
     private float timeThreshold;
+    private GameMaster m_GameMaster;
 
 
     /* Returns Vector3 at random angle with passed distance */
@@ -36,6 +40,7 @@ public class AsteroidSpawner : MonoBehaviour
     void Start()
     {
         timeThreshold = 10f / asteroidSpawnFrequency;
+        m_GameMaster = GameObject.Find("GameMaster").GetComponent<GameMaster>();
     }
 
 
@@ -58,14 +63,23 @@ public class AsteroidSpawner : MonoBehaviour
 
             /* Create new asteroid */
             Vector3 newAsteroidPos = getRandomSpawnPositionWithDistance(asteroidSpawnDistance);
-            GameObject newAsteroid =
-                Object.Instantiate(asteroidPrototype, newAsteroidPos, Quaternion.identity, this.transform);
+            GameObject newAsteroid;
+            if (m_GameMaster.getPlayerHp() < 3 && Random.Range(0, 1f) < turkeyChance)
+            {
+                newAsteroid =
+                    Object.Instantiate(turkeyPrototype, newAsteroidPos, Quaternion.identity, this.transform);
+            }
+            else
+            {
+                newAsteroid =
+                    Object.Instantiate(asteroidPrototype, newAsteroidPos, Quaternion.identity, this.transform);
+            }
 
 
             /* Apply force to asteroid */
             Vector3 newAsteroidForceDirection = (this.transform.position - newAsteroidPos).normalized;
             newAsteroid.GetComponent<Rigidbody>()
-                .AddForce(newAsteroidForceDirection * Random.Range(asteroidMinThrust, asteroidMaxThrust) * 1000f);
+                .AddForce(newAsteroidForceDirection * (Random.Range(asteroidMinThrust, asteroidMaxThrust) * 1000f));
 
 
             /* Scale, rotate and skew asteroid */

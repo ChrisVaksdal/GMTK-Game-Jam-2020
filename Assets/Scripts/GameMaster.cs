@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -47,6 +48,14 @@ public class GameMaster : MonoBehaviour
             hud.SetActive(false);
             scoreText.GetComponent<Text>().text = score.ToString();
         }
+        return playerHp;
+    }
+
+    public int Heal()
+    {
+        playerHp += 1;
+        playerHp = Math.Max(3, playerHp);
+        colorIcons();
         return playerHp;
     }
 
