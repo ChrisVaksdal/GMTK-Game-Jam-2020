@@ -40,7 +40,7 @@ public class HandleAsteroidCollision : MonoBehaviour
         }
     }
 
-    private void Explode()
+    public void Explode()
     {
         m_ParticleSystem.Play();
         explodeAudio.Play();
