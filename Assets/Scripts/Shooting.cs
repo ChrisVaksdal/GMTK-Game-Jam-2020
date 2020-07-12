@@ -24,7 +24,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && m_GameMaster.getPlayerHp() == 3)
+        if (Input.GetKeyDown(KeyCode.Space) && m_GameMaster.getPlayerHp() >= 3)
         {
             m_AudioSource.Play();
             CinemachineShake.Instance.ShakeCamera(2f, 0.3f);
