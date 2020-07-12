@@ -59,7 +59,7 @@ public class GameMaster : MonoBehaviour
     public int Heal()
     {
         playerHp += 1;
-        playerHp = Math.Max(3, playerHp);
+        playerHp = Math.Min(3, playerHp);
         colorIcons();
         healAudio.Play();
         return playerHp;
