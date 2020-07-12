@@ -92,6 +92,7 @@ public class GameMaster : MonoBehaviour
         Color noColor = Color.black;
         switch (playerHp)
         {
+            case 4:
             case 3:                
                 iconShoot.color = yesColor;
                 iconTurn.color = yesColor;
