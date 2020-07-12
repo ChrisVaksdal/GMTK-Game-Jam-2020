@@ -5002,3 +5002,5 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  risingText: {fileID: 7019898799823648667, guid: 0509978d67b42aa4ea7df1f41a3d5c5f,
+    type: 3}

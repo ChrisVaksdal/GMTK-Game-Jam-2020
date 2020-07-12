@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameMaster : MonoBehaviour
 {
@@ -11,12 +12,12 @@ public class GameMaster : MonoBehaviour
     public Image iconShoot;
 
     public GameObject hud;
+    public GameObject hudScoreText;
     public GameObject gameOverScreen;
-    public GameObject scoreText;
     public AudioSource healAudio;
-    
+    public GameObject gameOverScoreText;
     private int playerHp;
-    private long score;
+    public static long score;
     
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,7 @@ public class GameMaster : MonoBehaviour
         {
             takeDamage();
         }
+        hudScoreText.GetComponent<TextMeshProUGUI>().text = score.ToString();
     }
 
     public int getPlayerHp()
@@ -47,7 +49,8 @@ public class GameMaster : MonoBehaviour
         {
             gameOverScreen.SetActive(true);
             hud.SetActive(false);
-            scoreText.GetComponent<Text>().text = score.ToString();
+            gameOverScoreText.GetComponent<TextMeshProUGUI>().text = score.ToString();
+            Debug.Log(score);
         }
         return playerHp;
     }

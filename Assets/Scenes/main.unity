@@ -281,8 +281,9 @@ MonoBehaviour:
   iconTurn: {fileID: 2040664321}
   iconShoot: {fileID: 931991330}
   hud: {fileID: 1033296256}
+  hudScoreText: {fileID: 291667826}
   gameOverScreen: {fileID: 724496952}
-  scoreText: {fileID: 2122800780}
+  gameOverScoreText: {fileID: 2122800780}
   healAudio: {fileID: 1195745570}
 --- !u!4 &199500542
 Transform:

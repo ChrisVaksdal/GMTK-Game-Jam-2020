@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class HandleAsteroidCollision : MonoBehaviour
 {
+    public GameObject risingText;
     private ParticleSystem m_ParticleSystem;
     private GameMaster m_GameMaster;
     private AudioSource explodeAudio;
@@ -19,7 +20,6 @@ public class HandleAsteroidCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print("Aaaaa");
         if (other.CompareTag("Player"))
         {
             m_GameMaster.takeDamage();
@@ -32,6 +32,11 @@ public class HandleAsteroidCollision : MonoBehaviour
             Destroy(other.gameObject);
             CinemachineShake.Instance.ShakeCamera(3f, 0.7f);
             Explode();
+            int score = (int)Mathf.Floor(1000f / (float)transform.localScale.magnitude);
+            GameMaster.score += (long)score;
+            GameObject risingTextObject = Instantiate(risingText, transform.position, Quaternion.Euler(90f,0f,0f));
+            risingTextObject.GetComponent<RisingScoreText>().StartRising(score, 1.5f, 8f);
+
         }
     }
 
