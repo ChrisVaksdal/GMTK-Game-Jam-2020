@@ -8,6 +8,7 @@ public class Shooting : MonoBehaviour
 
     public GameObject bullet;
 
+    private AudioSource m_AudioSource;
     private Rigidbody m_PlayerRigidbody;
     private GameMaster m_GameMaster;
 
@@ -15,6 +16,7 @@ public class Shooting : MonoBehaviour
     {
         GameObject player = GameObject.Find("Player");
         m_PlayerRigidbody = player.GetComponent<Rigidbody>();
+        m_AudioSource = GetComponent<AudioSource>();
         m_GameMaster = GameObject.Find("GameMaster").GetComponent<GameMaster>();
     }
 
@@ -24,6 +26,7 @@ public class Shooting : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && m_GameMaster.getPlayerHp() == 3)
         {
+            m_AudioSource.Play();
             CinemachineShake.Instance.ShakeCamera(2f, 0.3f);
             GameObject instBullet = Instantiate(bullet, transform.position, transform.rotation);
             RocketMovement rocketMovement = instBullet.GetComponent<RocketMovement>();

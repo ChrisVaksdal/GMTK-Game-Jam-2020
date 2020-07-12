@@ -13,7 +13,8 @@ public class GameMaster : MonoBehaviour
     public GameObject hud;
     public GameObject gameOverScreen;
     public GameObject scoreText;
-
+    public AudioSource healAudio;
+    
     private int playerHp;
     private long score;
     
@@ -56,6 +57,7 @@ public class GameMaster : MonoBehaviour
         playerHp += 1;
         playerHp = Math.Max(3, playerHp);
         colorIcons();
+        healAudio.Play();
         return playerHp;
     }
 

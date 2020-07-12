@@ -8,11 +8,13 @@ public class HandleAsteroidCollision : MonoBehaviour
 {
     private ParticleSystem m_ParticleSystem;
     private GameMaster m_GameMaster;
+    private AudioSource explodeAudio;
 
     void Start()
     {
         m_ParticleSystem = GetComponent<ParticleSystem>();
         m_GameMaster = GameObject.Find("GameMaster").GetComponent<GameMaster>();
+        explodeAudio = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -36,6 +38,7 @@ public class HandleAsteroidCollision : MonoBehaviour
     private void Explode()
     {
         m_ParticleSystem.Play();
+        explodeAudio.Play();
         GetComponent<Renderer>().enabled = false;
         GetComponent<Collider>().enabled = false;
         Destroy(gameObject, m_ParticleSystem.main.duration);
