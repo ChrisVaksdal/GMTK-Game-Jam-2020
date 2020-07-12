@@ -19,6 +19,8 @@ public class GameMaster : MonoBehaviour
     public AudioSource healAudio;
     public AudioSource shieldAudio;
     public GameObject gameOverScoreText;
+    public AudioSource gameOverAudio;
+    public AudioSource gameMusicAudio;
     private int playerHp;
     public static long score;
 
@@ -59,6 +61,10 @@ public class GameMaster : MonoBehaviour
             gameOverScreen.SetActive(true);
             hud.SetActive(false);
             gameOverScoreText.GetComponent<TextMeshProUGUI>().text = "SCORE: " + score.ToString();
+            gameOverAudio.Play();
+            gameMusicAudio.volume *= 0.3f;
+            //gameMusicAudio.Stop();
+            //gameMusicAudio.Play();
         }
         else if (playerHp == 3)
         {

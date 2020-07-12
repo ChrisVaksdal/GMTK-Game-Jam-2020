@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!82 &177052919 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 64534611, guid: 0f3f459020d52a64da03a3e1580497e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1976502597}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &199500540
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,6 +166,8 @@ MonoBehaviour:
   healAudio: {fileID: 1195745570}
   shieldAudio: {fileID: 501817050}
   gameOverScoreText: {fileID: 2122800780}
+  gameOverAudio: {fileID: 446081486}
+  gameMusicAudio: {fileID: 177052919}
 --- !u!4 &199500542
 Transform:
   m_ObjectHideFlags: 0
@@ -330,6 +338,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291667826}
   m_CullTransparentMesh: 0
+--- !u!82 &446081486 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 446081486, guid: 0f3f459020d52a64da03a3e1580497e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1976502597}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &501817050 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 501817050, guid: 0f3f459020d52a64da03a3e1580497e6,
@@ -1545,41 +1559,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4973101782018520732, guid: 0f3f459020d52a64da03a3e1580497e6,
-        type: 3}
-      propertyPath: asteroidAccuracy
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4973101782018520732, guid: 0f3f459020d52a64da03a3e1580497e6,
-        type: 3}
-      propertyPath: asteroidMinThrust
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4973101782018520732, guid: 0f3f459020d52a64da03a3e1580497e6,
-        type: 3}
-      propertyPath: asteroidMaxThrust
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4973101782018520732, guid: 0f3f459020d52a64da03a3e1580497e6,
-        type: 3}
-      propertyPath: spawnFrequencyAcc
-      value: 1.011
-      objectReference: {fileID: 0}
-    - target: {fileID: 4973101782018520732, guid: 0f3f459020d52a64da03a3e1580497e6,
-        type: 3}
-      propertyPath: bombChance
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 4973101782018520732, guid: 0f3f459020d52a64da03a3e1580497e6,
-        type: 3}
-      propertyPath: shieldChance
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 4973101782018520732, guid: 0f3f459020d52a64da03a3e1580497e6,
-        type: 3}
-      propertyPath: maxAsteroidSpawnFrequency
-      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f3f459020d52a64da03a3e1580497e6, type: 3}
