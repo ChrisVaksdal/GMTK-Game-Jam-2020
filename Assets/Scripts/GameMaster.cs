@@ -29,11 +29,12 @@ public class GameMaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Delete))
-        {
-            takeDamage();
-        }
         hudScoreText.GetComponent<TextMeshProUGUI>().text = score.ToString();
+    }
+
+    private void FixedUpdate()
+    {
+        score += 1;
     }
 
     public int getPlayerHp()
