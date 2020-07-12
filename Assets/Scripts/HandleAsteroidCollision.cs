@@ -21,12 +21,14 @@ public class HandleAsteroidCollision : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             m_GameMaster.takeDamage();
+            CinemachineShake.Instance.ShakeCamera(6f, 1f);
             Explode();
         }
 
         else if (other.CompareTag("Weapon"))
         {
             Destroy(other.gameObject);
+            CinemachineShake.Instance.ShakeCamera(3f, 0.7f);
             Explode();
         }
     }
