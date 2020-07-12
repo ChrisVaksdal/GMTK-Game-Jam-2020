@@ -74,7 +74,7 @@ public class AsteroidSpawner : MonoBehaviour
                 newAsteroid =
                     Object.Instantiate(turkeyPrototype, newAsteroidPos, Quaternion.identity, this.transform);
             }
-            else if (m_GameMaster.getPlayerHp() == 3 && Random.Range(0f, 1f) < bombChance)
+            else if (m_GameMaster.getPlayerHp() >= 3 && Random.Range(0f, 1f) < bombChance)
             {
                 newAsteroid =
                     Object.Instantiate(bombPrototype, newAsteroidPos, Quaternion.identity, this.transform);
