@@ -49,6 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bombExplode: {fileID: 0}
+  risingText: {fileID: 7019898799823648667, guid: 0509978d67b42aa4ea7df1f41a3d5c5f,
+    type: 3}
 --- !u!54 &3793446733360311200
 Rigidbody:
   m_ObjectHideFlags: 0

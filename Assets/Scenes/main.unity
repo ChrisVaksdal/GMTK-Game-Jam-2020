@@ -698,7 +698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1033296257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1093,28 +1093,28 @@ PrefabInstance:
     - target: {fileID: 6438050549348255879, guid: 7b157b75585a8144790c7912b89ffc6f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6438050550134225926, guid: 7b157b75585a8144790c7912b89ffc6f,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8564804bf34f30b4db95d8feb2fb8ee1,
+      objectReference: {fileID: 21300000, guid: a334f392b91694048919d42a667c8585,
         type: 3}
     - target: {fileID: 6438050550134225944, guid: 7b157b75585a8144790c7912b89ffc6f,
         type: 3}
       propertyPath: m_Name
-      value: Logo
+      value: Game Over
       objectReference: {fileID: 0}
     - target: {fileID: 6438050550134225945, guid: 7b157b75585a8144790c7912b89ffc6f,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6438050550134225945, guid: 7b157b75585a8144790c7912b89ffc6f,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6438050550134225945, guid: 7b157b75585a8144790c7912b89ffc6f,
         type: 3}
@@ -1299,7 +1299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
-  m_AmplitudeGain: 5.546782
+  m_AmplitudeGain: 0
   m_FrequencyGain: 1
   mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &1362823505

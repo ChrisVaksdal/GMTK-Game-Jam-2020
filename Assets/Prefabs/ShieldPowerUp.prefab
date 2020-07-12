@@ -76,10 +76,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 4.4
-  m_Height: 18
+  m_Radius: 0.3
+  m_Height: 1.0962064
   m_Direction: 1
-  m_Center: {x: 0, y: 7.81, z: 0.76}
+  m_Center: {x: 0, y: 0.47800326, z: 0}
 --- !u!199 &-1441007021003834307
 ParticleSystemRenderer:
   serializedVersion: 6

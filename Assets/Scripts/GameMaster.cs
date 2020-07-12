@@ -58,7 +58,7 @@ public class GameMaster : MonoBehaviour
         {
             gameOverScreen.SetActive(true);
             hud.SetActive(false);
-            gameOverScoreText.GetComponent<TextMeshProUGUI>().text = score.ToString();
+            gameOverScoreText.GetComponent<TextMeshProUGUI>().text = "SCORE: " + score.ToString();
         }
         else if (playerHp == 3)
         {
@@ -88,7 +88,6 @@ public class GameMaster : MonoBehaviour
 
     private void colorIcons()
     {
-        //Color yesColor = new Color32(0x00, 0xDB, 0x75, 0xFF); // Light-green
         Color yesColor = new Color32(0x36, 0xE7, 0xE4, 0xFF);   // Cyan
         Color noColor = Color.black;
         switch (playerHp)

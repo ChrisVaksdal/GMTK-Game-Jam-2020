@@ -19,7 +19,7 @@ public class HandleShieldPowerUpCollision : MonoBehaviour
         {
             m_GameMaster.ShieldPowerUp();
             Destroy(gameObject);
-            int score = 1000;
+            int score = 1500;
             GameMaster.score += (long)score;
             GameObject risingTextObject = Instantiate(risingText, transform.position, Quaternion.Euler(90f, 0f, 0f));
             risingTextObject.GetComponent<RisingScoreText>().StartRising(score, 1.5f, 8f);
