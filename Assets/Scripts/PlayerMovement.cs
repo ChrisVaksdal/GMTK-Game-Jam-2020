@@ -9,7 +9,8 @@ public class PlayerMovement : MonoBehaviour
     public float friction = 1f;
 
     public ParticleSystem particleSystem;
-
+    public AudioSource engineAudio;
+    
     private GameMaster m_GameMaster;
     private Rigidbody m_RigidBody;
 
@@ -39,10 +40,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 particleSystem.Play();
             }
+
+            engineAudio.volume = vertical;
         }
 
         Vector3 friction = m_RigidBody.velocity * (this.friction * -1);
         m_RigidBody.AddForce(friction);
+        
 
         Vector3 eulerAngleVelocity = new Vector3(0, horizontal, 0);
         Quaternion deltaRotation = Quaternion.Euler(eulerAngleVelocity * (Time.deltaTime * rotationSpeed));
